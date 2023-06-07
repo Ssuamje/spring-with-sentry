@@ -1,5 +1,0 @@
-sentry:
-  dsn: https://b2c7cb331f8b4926ac186d4a43f14490@o4505318084313088.ingest.sentry.io/4505318085296128
-  logging:
-    minimum-event-level: info
-    minimum-breadcrumb-level: info
