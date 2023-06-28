@@ -1,0 +1,17 @@
+name: Get Branch Name
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  get_branch_name:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get branch name
+        run: echo "The current branch is ${{ github.ref }}"
