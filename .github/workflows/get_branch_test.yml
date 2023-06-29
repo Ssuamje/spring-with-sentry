@@ -19,6 +19,7 @@ jobs:
           echo "The current branch is ${{ github.ref }}"
           echo "RUNTIME ENV = $RUNTIME_ENV"
           export RUNTIME_ENV="HELLOWORLD!"
+          echo "RUNTIME ENV = $RUNTIME_ENV"
           
       - name: Echo Changed Runtime Env
         run: |
