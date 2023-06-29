@@ -9,7 +9,7 @@ jobs:
   get_branch_name:
     runs-on: ubuntu-latest
     env: |
-      RUNTIME_ENV:
+      RUNTIME_ENV: 'hello'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
