@@ -8,7 +8,7 @@ on:
 jobs:
   get_branch_name:
     runs-on: ubuntu-latest
-    env: |
+    env:
       RUNTIME_ENV: 'hello'
     steps:
       - name: Checkout repository
