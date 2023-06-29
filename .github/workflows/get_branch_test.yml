@@ -8,10 +8,18 @@ on:
 jobs:
   get_branch_name:
     runs-on: ubuntu-latest
-    
+    env: |
+      RUNTIME_ENV = ""
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Get branch name
-        run: echo "The current branch is ${{ github.ref }}"
+        run: |
+          echo "The current branch is ${{ github.ref }}"
+          echo "RUNTIME ENV = $RUNTIME_ENV"
+          $RUNTIME_ENV="HELLOWORLD!"
+          
+      - name: Echo Changed Runtime Env
+        run: |
+          echo "CHANGED RUNTIME ENV = $RUNTIME_ENV"
